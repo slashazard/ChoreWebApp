@@ -1,0 +1,49 @@
+{
+  "kids": [
+    {
+      "name": "Kid1",
+      "points": 1,
+      "chores": [
+        { "name": "Make bed", "completed": false },
+        { "name": "Clean room", "completed": false },
+        { "name": "Pet cat", "completed": false }
+      ]
+    },
+    {
+      "name": "Kid2",
+      "points": 0,
+      "chores": [
+        { "name": "Make bed", "completed": true },
+        { "name": "Clean room", "completed": false },
+        { "name": "Pet cat", "completed": false }
+      ]
+    },
+    {
+      "name": "Kid3",
+      "points": 5,
+      "chores": [
+        { "name": "Make bed", "completed": false },
+        { "name": "Clean room", "completed": true },
+        { "name": "Pet cat", "completed": false }
+      ]
+    },
+    {
+      "name": "Kid4",
+      "points": 20,
+      "chores": [
+        { "name": "Make bed", "completed": false },
+        { "name": "Clean room", "completed": false },
+        { "name": "Pet cat", "completed": true }
+      ]
+    },
+    {
+      "name": "Kid5",
+      "points": 0,
+      "chores": [
+        { "name": "Make bed", "completed": false },
+        { "name": "Clean room", "completed": false },
+        { "name": "Pet cat", "completed": false }
+      ]
+    }
+  ]
+}
