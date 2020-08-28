@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Chore } from "../types";
 import { ChoreItem } from "./chore-item";
+import { Form } from "react-bootstrap";
 
 interface ChoreListProps {
   chores: Chore[];
@@ -8,11 +9,11 @@ interface ChoreListProps {
 
 export const ChoreList: FunctionComponent<ChoreListProps> = ({ chores }) => {
   return chores.length > 0 ? (
-    <div>
+    <Form className="checkbox-inline">
       {chores.map((c) => {
         return <ChoreItem key={c.name} chore={c} />;
       })}
-    </div>
+    </Form>
   ) : (
     <span>No chores</span>
   );

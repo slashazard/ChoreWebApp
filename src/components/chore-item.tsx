@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useState, ChangeEvent } from "react";
+import { Form } from "react-bootstrap";
 import { Chore } from "../types";
 
 interface ChoreItemProps {
@@ -17,10 +18,12 @@ export const ChoreItem: FunctionComponent<ChoreItemProps> = ({
   };
   return (
     <div>
-      <span>
-        <input type="checkbox" checked={done} onChange={handleChange} />
-        <span>{name}</span>
-      </span>
+      <Form.Check
+        type="checkbox"
+        checked={done}
+        onChange={handleChange}
+        label={name}
+      />
     </div>
   );
 };
