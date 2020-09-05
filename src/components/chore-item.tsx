@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState, ChangeEvent } from "react";
 import { Chore } from "../types";
+import { Row } from "react-bootstrap";
 
 interface ChoreItemProps {
   chore: Chore;
@@ -16,11 +17,14 @@ export const ChoreItem: FunctionComponent<ChoreItemProps> = ({
     setDone(e.target.checked);
   };
   return (
-    <div>
-      <span>
-        <input type="checkbox" checked={done} onChange={handleChange} />
-        <span>{name}</span>
-      </span>
-    </div>
+    <Row>
+      <input
+        className="col-3"
+        type="checkbox"
+        checked={done}
+        onChange={handleChange}
+      />
+      <span className="col-3 border">{name}</span>
+    </Row>
   );
 };

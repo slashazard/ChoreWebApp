@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Chore } from "../types";
 import { ChoreItem } from "./chore-item";
+import { Row } from "react-bootstrap";
 
 interface ChoreListProps {
   chores: Chore[];
