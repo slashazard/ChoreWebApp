@@ -11,10 +11,10 @@ function App() {
   return (
     <div className="App">
       <ChoreNav kids={KCData} />
-      {KCData.map((k) => {
+      {KCData.map((k, i) => {
         return (
           <Route
-            key={k.name}
+            key={i}
             exact
             path={"/" + k.name}
             render={() => <KidInfo kid={k} />}

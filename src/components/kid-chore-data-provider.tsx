@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { KidChoreDataContext } from "../contexts";
+import { KidChoreDataContext, UpdateKidChoreDataContext } from "../contexts";
 import { Kid } from "../types";
 
 type Props = {
@@ -24,7 +24,9 @@ export const KCDataProvider = ({ children }: Props) => {
 
   return (
     <KidChoreDataContext.Provider value={data}>
-      {children}
+      <UpdateKidChoreDataContext.Provider value={setData}>
+        {children}
+      </UpdateKidChoreDataContext.Provider>
     </KidChoreDataContext.Provider>
   );
 };

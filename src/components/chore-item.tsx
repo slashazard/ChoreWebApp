@@ -1,30 +1,32 @@
 import React, { FunctionComponent, useState, ChangeEvent } from "react";
 import { Chore } from "../types";
-import { Row } from "react-bootstrap";
+import { Row, InputGroup, FormControl, FormLabel } from "react-bootstrap";
 
 interface ChoreItemProps {
   chore: Chore;
-  //onChange: ChangeEvent<HTMLInputElement>;
+  handleCheckedChanged: (e: ChangeEvent<HTMLInputElement>) => void;
+  index: number;
 }
 
 export const ChoreItem: FunctionComponent<ChoreItemProps> = ({
   chore: { name, completed },
-  //onChange,
+  handleCheckedChanged,
+  index,
 }) => {
-  const [done, setDone] = useState(completed);
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log("Check changed: target:", e.target);
-    setDone(e.target.checked);
-  };
   return (
     <Row>
-      <input
-        className="col-3"
-        type="checkbox"
-        checked={done}
-        onChange={handleChange}
-      />
-      <span className="col-3 border">{name}</span>
+      <InputGroup className="m-5">
+        <InputGroup.Prepend>
+          <InputGroup.Checkbox
+            className="m-5"
+            aria-label={name}
+            onChange={handleCheckedChanged}
+            checked={completed}
+            id={"chore-" + index.toString()}
+          />
+        </InputGroup.Prepend>
+        <FormLabel className="col-3 m-5 border">{name}</FormLabel>
+      </InputGroup>
     </Row>
   );
 };
