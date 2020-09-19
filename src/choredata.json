@@ -1,7 +1,7 @@
 {
   "kids": [
     {
-      "name": "Kid1",
+      "name": "Allison",
       "points": 1,
       "chores": [
         { "name": "Make bed", "completed": false },
@@ -10,7 +10,7 @@
       ]
     },
     {
-      "name": "Kid2",
+      "name": "Steven",
       "points": 0,
       "chores": [
         { "name": "Make bed", "completed": true },
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "name": "Kid3",
+      "name": "Cordy",
       "points": 5,
       "chores": [
         { "name": "Make bed", "completed": false },
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "name": "Kid4",
+      "name": "Marcus",
       "points": 20,
       "chores": [
         { "name": "Make bed", "completed": false },
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "name": "Kid5",
+      "name": "Kaylee",
       "points": 0,
       "chores": [
         { "name": "Make bed", "completed": false },
