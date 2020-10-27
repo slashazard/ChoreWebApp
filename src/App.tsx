@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import "./App.css";
 import { KidInfo } from "./components/kid-info";
 import { ChoreNav } from "./components/chore-nav";
+import { ChoreHome } from "./components/chore-home";
 import { KidChoreDataContext } from "./contexts";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <ChoreNav kids={KCData} />
+      <Route exact path={"/"} render={() => <ChoreHome />} />
       {KCData.map((k, i) => {
         return (
           <Route
